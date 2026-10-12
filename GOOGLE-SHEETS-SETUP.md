@@ -11,6 +11,8 @@ Google Sheets is the committee's free editing dashboard. The website reads a **p
    type	key	value	title	role	date	details	urdu	education	image	link	status
    ```
 
+   Or use the ready-to-import [website-updates-example.csv](./website-updates-example.csv): select cell A1 in the `Website updates` tab, choose **File → Import → Upload**, select the CSV, and choose **Replace data at selected cell**. The CSV includes the committee's example Tata hospital food distribution event from 14 October 2026, already in the correct date format, along with blank counter rows; edit or remove the event if its details change. After import, check **File → Share → Publish to web** and publish the `Website updates` tab as CSV if it is not already published.
+
 3. Add one row for each counter. Enter the row's `type` and `key` as shown; leave `value` blank until the committee confirms the figure:
 
    | `type` | `key` |
@@ -22,7 +24,7 @@ Google Sheets is the committee's free editing dashboard. The website reads a **p
 
    Leave `value` blank until the committee confirms the figure, then enter a non-negative whole number. The website labels these **People benefited**, **Aadhaar update sessions**, **Counselling sessions**, and **Free food distributions**.
 
-4. To publish an event or open session, add a row with `type` set to `event` or `session`, a `title`, a `date` in `YYYY-MM-DD` format, optional `details` and full HTTP(S) `link`, and `status` set to `published`. Set the date column to **Format → Number → Plain text** so Google Sheets preserves that format. Only published events/sessions dated today or later appear on the website; past ones disappear automatically. Use `draft` until an event is ready.
+4. To publish an event or open session, add a row with `type` set to `event` or `session`, a unique `key` (for example `tata-hospital-food-distribution`), a `title`, a `date` in `YYYY-MM-DD` format (for example `2026-10-14`, not `14/10/2026`), optional `details` and full HTTP(S) `link`, and `status` set to `published`. Set the date column to **Format → Number → Plain text** so Google Sheets preserves that format. Only published events/sessions dated today or later appear on the website; past ones disappear automatically. Use `draft` until an event is ready.
 
 5. To update a current committee member, add one row with `type` `member` and that member's key from the list below. Edit that same row for future changes. Use `title` for the name, `role` for the position, `details` for the short bio, `urdu` for the Urdu bio, `education` for education/affiliations, `image` for a publicly viewable HTTPS photo URL, and `link` for an optional public profile. Existing values remain unchanged when a field is left blank. Set `status` to `draft` to temporarily hide that member. To add a member, use a new unique key, fill in `title` and `role`, and set `status` to `published`.
 
