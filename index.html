@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="impact-config.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -25,8 +26,10 @@
         <span class="menu-label">Menu</span>
       </button>
       <nav class="navigation" id="primary-navigation" aria-label="Main navigation">
+        <a href="#impact">Our impact</a>
         <a href="#about">About</a>
         <a href="#committee">Committee</a>
+        <a href="#events">Events</a>
         <a href="#updates">Updates</a>
         <a class="nav-contact" href="#contact">Contact us <span aria-hidden="true">↗</span></a>
       </nav>
@@ -48,6 +51,26 @@
         <div class="hero-note"><span class="note-star" aria-hidden="true">✳</span><span>Community, connection<br>and shared heritage</span></div>
       </div>
       <div class="flag-stripe" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+
+    <section class="impact-section section-pad" id="impact">
+      <div class="container impact-grid">
+        <div class="impact-copy">
+          <p class="eyebrow eyebrow-green"><span></span> Service that moves us forward</p>
+          <h2>From Bihar to Mumbai,<br><em>we rise together.</em></h2>
+          <p>The journey upward is built on people helping people. See the difference our community makes through practical support and open sessions.</p>
+          <p class="impact-data-status" id="impact-data-status" role="status" aria-live="polite">Impact figures and events will appear here when the committee connects its shared sheet.</p>
+        </div>
+        <div class="impact-visual">
+          <img class="impact-image" src="Bihar%20to%20Mumbai_%20The%20Journey%20Upward.png" alt="A journey from Bihar to Mumbai, representing employment, financial stability, education, family support and career opportunities">
+          <div class="impact-stats" aria-label="Our community impact">
+            <article class="impact-stat"><strong class="impact-value" data-impact-key="beneficiaries">—</strong><span>People benefited</span></article>
+            <article class="impact-stat"><strong class="impact-value" data-impact-key="aadhaar">—</strong><span>Aadhaar update sessions</span></article>
+            <article class="impact-stat"><strong class="impact-value" data-impact-key="counselling">—</strong><span>Counselling sessions</span></article>
+            <article class="impact-stat"><strong class="impact-value" data-impact-key="food">—</strong><span>Free food distributions</span></article>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="intro section-pad" id="about">
@@ -81,7 +104,7 @@
           <p class="section-aside">Here to serve and represent<br>our community in Mumbai.</p>
         </div>
         <div class="committee-grid">
-          <details class="member-card">
+          <details class="member-card" data-member-key="anwar-ahmed-shaikh">
             <summary class="member-trigger">
               <div class="member-avatar avatar-saffron" aria-hidden="true">AS</div>
               <div><h3>Anwar Ahmed Shaikh</h3><p>President</p></div>
@@ -92,7 +115,7 @@
               <p class="bio-urdu" lang="ur" dir="rtl">انور احمد شیخ انجمن باشندگانِ بہار ممبئی کے صدر ہیں۔</p>
             </div>
           </details>
-          <details class="member-card">
+          <details class="member-card" data-member-key="furquan-rizwan-shaikh">
             <summary class="member-trigger">
               <img class="member-avatar member-photo" src="120624780_3511536175535875_4972248816961092577_n.jpg" alt="Adv. Mohd. Furquan Rizwan Shaikh">
               <div><h3>Adv. Mohd. Furquan<br>Rizwan Shaikh</h3><p>General Secretary</p></div>
@@ -105,7 +128,7 @@
               <a class="member-profile-link" href="https://www.instagram.com/MohdFurquanRizwan" target="_blank" rel="noopener noreferrer">Instagram profile <span aria-hidden="true">↗</span></a>
             </div>
           </details>
-          <details class="member-card">
+          <details class="member-card" data-member-key="azmat-ali">
             <summary class="member-trigger">
               <div class="member-avatar avatar-blue" aria-hidden="true">AA</div>
               <div><h3>Azmat Ali</h3><p>Treasurer</p></div>
@@ -116,7 +139,7 @@
               <p class="bio-urdu" lang="ur" dir="rtl">عظمت علی انجمن باشندگانِ بہار ممبئی کے خزانچی ہیں۔</p>
             </div>
           </details>
-          <details class="member-card">
+          <details class="member-card" data-member-key="badrul-hasan-siddiqui">
             <summary class="member-trigger">
               <div class="member-avatar avatar-blue" aria-hidden="true">BS</div>
               <div><h3>Dr. Badrul Hasan<br>Siddiqui</h3><p>Vice President</p></div>
@@ -127,7 +150,7 @@
               <p class="bio-urdu" lang="ur" dir="rtl">ڈاکٹر بدرالحسن صدیقی انجمن باشندگانِ بہار ممبئی کے نائب صدر ہیں۔</p>
             </div>
           </details>
-          <details class="member-card">
+          <details class="member-card" data-member-key="abulais-shaikh">
             <summary class="member-trigger">
               <div class="member-avatar avatar-saffron" aria-hidden="true">AS</div>
               <div><h3>Abulais Shaikh</h3><p>Vice President</p></div>
@@ -138,7 +161,7 @@
               <p class="bio-urdu" lang="ur" dir="rtl">ابولائس شیخ انجمن باشندگانِ بہار ممبئی کے نائب صدر ہیں۔</p>
             </div>
           </details>
-          <details class="member-card">
+          <details class="member-card" data-member-key="kasim-shaikh">
             <summary class="member-trigger">
               <div class="member-avatar avatar-green" aria-hidden="true">KS</div>
               <div><h3>Mohd. Kasim Shaikh</h3><p>Joint Secretary</p></div>
@@ -149,7 +172,7 @@
               <p class="bio-urdu" lang="ur" dir="rtl">محمد قاسم شیخ انجمن باشندگانِ بہار ممبئی کے جوائنٹ سیکریٹری ہیں۔</p>
             </div>
           </details>
-          <details class="member-card">
+          <details class="member-card" data-member-key="dastagir-ansari">
             <summary class="member-trigger">
               <div class="member-avatar avatar-saffron" aria-hidden="true">DA</div>
               <div><h3>Dastagir Ansari</h3><p>Joint Secretary</p></div>
@@ -160,6 +183,21 @@
               <p class="bio-urdu" lang="ur" dir="rtl">دستگیر انصاری انجمن باشندگانِ بہار ممبئی کے جوائنٹ سیکریٹری ہیں۔</p>
             </div>
           </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="events-section section-pad" id="events">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow eyebrow-green"><span></span> Come be part of it</p>
+            <h2>Upcoming <em>events &amp; sessions.</em></h2>
+          </div>
+          <p class="section-aside">Community sessions and events,<br>shared by our committee.</p>
+        </div>
+        <div class="events-list" id="events-list" aria-live="polite">
+          <p class="events-empty">Upcoming events will be announced here.</p>
         </div>
       </div>
     </section>

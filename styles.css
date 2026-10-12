@@ -65,6 +65,18 @@ a { color: inherit; }
 .flag-stripe span:nth-child(2) { background: #fffefa; }
 .flag-stripe span:last-child { background: #32764a; }
 
+.impact-section { overflow: hidden; background: var(--cream); }
+.impact-grid { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 58px; }
+.impact-copy p:not(.eyebrow) { max-width: 440px; color: #606a61; font-size: 14px; line-height: 1.85; }
+.impact-copy .impact-data-status { margin-top: 24px; color: var(--green-mid); font-size: 12px; }
+.impact-visual { position: relative; min-width: 0; padding: 0 0 48px 24px; }
+.impact-image { display: block; width: 100%; max-height: 660px; border-radius: 4px; object-fit: contain; box-shadow: 0 18px 45px rgba(18,61,42,.12); }
+.impact-stats { position: absolute; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 17px 10px; border: 1px solid rgba(18,61,42,.08); border-radius: 5px; background: rgba(255,254,250,.97); box-shadow: 0 12px 36px rgba(18,61,42,.15); }
+.impact-stat { display: flex; min-width: 0; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 4px 9px; text-align: center; }
+.impact-stat + .impact-stat { border-left: 1px solid var(--line); }
+.impact-value { color: var(--green); font-family: var(--serif); font-size: clamp(20px, 2.4vw, 30px); line-height: 1.1; }
+.impact-stat > span { color: var(--muted); font-size: 9px; line-height: 1.4; }
+
 .section-pad { padding-block: 95px; }
 .intro { background: var(--cream); }
 .intro-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 75px; align-items: start; }
@@ -108,6 +120,16 @@ h2 em { color: #b36a2e; }
 .member-education strong { color: var(--green); }
 .member-profile-link { display: inline-flex; gap: 7px; margin-top: 3px; color: var(--green-mid); font-size: 11px; font-weight: 700; text-decoration: none; }
 .member-profile-link:hover { color: #b36a2e; }
+
+.events-section { background: var(--cream); }
+.events-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; }
+.events-empty { grid-column: 1 / -1; margin: 0; padding: 25px; border: 1px dashed #cbd2c9; color: var(--muted); font-size: 13px; text-align: center; }
+.event-card { min-width: 0; padding: 23px; border: 1px solid var(--line); background: var(--paper); }
+.event-date { margin: 0 0 11px; color: #a45e28; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.event-card h3 { margin: 0; color: var(--green); font-family: var(--serif); font-size: 20px; line-height: 1.35; }
+.event-details { margin: 11px 0 0; color: #606a61; font-size: 12px; line-height: 1.75; white-space: pre-line; }
+.event-link { display: inline-flex; gap: 6px; margin-top: 16px; color: var(--green-mid); font-size: 11px; font-weight: 700; text-decoration: none; }
+.event-link:hover { color: #b36a2e; }
 
 .updates-section { padding-top: 24px; background: var(--paper); }
 .updates-card { min-height: 390px; display: grid; grid-template-columns: .9fr 1.1fr; overflow: hidden; background: var(--green); }
@@ -177,6 +199,10 @@ h2 em { color: #b36a2e; }
   .hero-copy { max-width: 430px; font-size: 14px; }
   .hero-note { right: 0; bottom: 26px; }
   .section-pad { padding-block: 70px; }
+  .impact-grid { grid-template-columns: 1fr; gap: 24px; }
+  .impact-visual { padding-left: 0; }
+  .impact-image { width: min(100%, 500px); max-height: 650px; margin-inline: auto; }
+  .impact-stats { right: 0; left: 0; }
   .intro-grid { grid-template-columns: 1fr; gap: 9px; }
   .intro-copy { padding-top: 5px; }
   .stats-row { margin-top: 40px; }
@@ -188,6 +214,7 @@ h2 em { color: #b36a2e; }
   .member-card { min-height: 0; padding-left: 0; }
   .member-trigger { min-height: 100px; }
   .member-bio { padding-left: 75px; }
+  .events-list { grid-template-columns: 1fr; }
   .updates-section { padding-top: 0; }
   .updates-card { grid-template-columns: 1fr; }
   .updates-copy { padding: 42px 26px 36px; }
@@ -211,6 +238,10 @@ h2 em { color: #b36a2e; }
   .hero { min-height: 600px; }
   .stats-row { gap: 10px; }
   .stat-number { font-size: 18px; }
+  .impact-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 9px; padding: 12px 7px; }
+  .impact-stat { padding-inline: 5px; }
+  .impact-stat:nth-child(3) { border-left: 0; }
+  .impact-value { font-size: 22px; }
   .contact-card .email-address { font-size: 12px; }
 }
 
